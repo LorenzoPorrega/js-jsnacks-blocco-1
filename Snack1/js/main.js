@@ -4,6 +4,8 @@ const button = document.querySelector(".btn");
 const table =  document.querySelector(".table");
 const nameField = document.querySelector(".name");
 const surnameField = document.querySelector(".surname");
+const tableRow = document.querySelector(".table-row");
+const tableBody = document.querySelector(".table-body");
 
 /*Test to see if a random name is generated
 console.log(rngNomi);
@@ -12,7 +14,7 @@ console.log(rngCognomi);
 
 /*Function to have 1 generated name + surname pair generated and printed
 * inside the HTML table for each click on the button
-*/
+
 button.addEventListener("click", function(){
     table.classList.remove("d-none")
     nameField.innerHTML = "";
@@ -26,4 +28,25 @@ button.addEventListener("click", function(){
     console.log(rngNomi);
     console.log(rngCognomi);
 });
+*/
 
+button.addEventListener("click", function(){
+    table.classList.remove("d-none")
+    nameField.innerHTML = "";
+    surnameField.innerHTML = "";
+
+    for (i = 0; i < 25; i++){
+        const rngNomi = nomi[Math.floor(Math.random() * nomi * 25)];
+        const rngCognomi = cognomi[Math.floor(Math.random() * cognomi.length)];
+        
+        if (i < 5){
+        tableBody.innerHTML = `<tr class="table-row">
+                                <td class="name text-center">${rngNomi}</td>
+                                <td class="surname text-center">${rngCognomi}</td>
+                            </tr>`;
+        console.log(rngNomi);
+        console.log(rngCognomi);
+        }
+        else{}
+    }
+});
