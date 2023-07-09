@@ -6,7 +6,7 @@ posizione dispari.
 //               0 1 2 3 4 5 6 7 8 9  10 11 12 13 14 array's items position
 const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 //I print in console array items, not their position
-console.log(("Lista degli items nell'array ") + (numbers));
+console.log(("Lista degli items nell'array: ") + (numbers));
 //The "sum" let let's me store the sum in the for cycle and use it outside of itself
 let somma = 0;
 
